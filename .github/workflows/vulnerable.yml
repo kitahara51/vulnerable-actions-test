@@ -15,9 +15,10 @@ jobs:
 
       - name: Run tests
         env:
-          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}  # ← シークレットが環境変数に
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 本来はテストを実行するつもりだが...
           # 攻撃者のコードが checkout されているので
           # この時点で steal.sh 等が存在する
-          bash ./steal.sh
+          bash ./test.sh
